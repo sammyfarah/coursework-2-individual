@@ -16,7 +16,7 @@ req.collection = db.collection(collectionName)
 return next()
 })
 
-//collection name
+//collection name 
 app.get('/'
 , (req, res, next) => {res.send('Select a collection, e.g., /collection/CollectionName')
 })
