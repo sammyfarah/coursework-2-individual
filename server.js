@@ -30,6 +30,7 @@ req.collection.find({}, {limit: 5, sort: [['price'
          if (e) return next(e)
        res.send(results) }) })
 
+//show collection 
 app.post('/collection/:collectionName'
 , (req, res, next) => {
 req.collection.insert(req.body, (e, results) => {
