@@ -74,6 +74,7 @@ res.send((result.result.n === 1) ?
 })
 })
 
+//connection to localhost:3000
 app.listen(3000, ()=> {
 console.log('express is working on server localhost:3000')})
 
