@@ -48,7 +48,7 @@ req.collection.findone(
 
 
 
-
+//update products
 app.put('/collection/:collectionName/:id'
 , (req, res, next) => {
 req.collection.update(
