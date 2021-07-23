@@ -37,7 +37,7 @@ req.collection.insert(req.body, (e, results) => {
 if (e) return next(e)
 res.send(results.ops)}) })
 
-
+//get product through its id
 const ObjectID = require('mongodb').ObjectId;
 app.get('/collection/:collectionName/:id',(req,res,next) => {
 req.collection.findone(
