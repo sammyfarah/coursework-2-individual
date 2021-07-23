@@ -62,7 +62,7 @@ res.send((result.result.n === 1) ?
 })
 })
 
-
+//delete product
 app.delete('/collection/:collectionName/:id'
 , (req, res, next) => {
 req.collection.deleteOne(
