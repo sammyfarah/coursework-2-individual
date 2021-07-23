@@ -4,17 +4,19 @@ const app = express ();
 const mongoClient = require('mongodb').MongoClient
 let db;
 
+//connect mongodb to mongodb compass
 mongoClient.connect('mongodb+srv://samera:farah@cluster0.tlcth.mongodb.net/'
 , (err, client) => {
 db = client.db('webstore')
 })
-
+ 
 app.param('collectionName'
 , (req, res, next, collectionName) => {
 req.collection = db.collection(collectionName)
 return next()
 })
 
+//collection name
 app.get('/'
 , (req, res, next) => {res.send('Select a collection, e.g., /collection/CollectionName')
 })
